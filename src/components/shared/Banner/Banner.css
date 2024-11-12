@@ -1,0 +1,57 @@
+/*Home Banner */
+.bg-home-image{
+    background-image: url('../../../assets/asset/home/banner.jpg');
+    background-size: cover;
+    
+}
+
+.text-style{
+    text-shadow: rgb(0, 0, 0) 23.0533px -2.71px 17.4091px;
+    font-family: 'Cinzel', serif;
+    
+
+}
+
+/* 
+.legend {
+    position: absolute;
+   top: 20px !important;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: rgb(0, 0, 0) 23.0533px -2.71px 17.4091px !important;
+    font-size: 70px !important;
+    font-family: 'Cinzel', serif !important;
+    background: transparent !important;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 10px;
+  }
+   */
+   .carousel .carousel {
+  
+    width: 100% !important;
+   
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    
+  }
+
+  .carousel-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .heading{
+    font-size: 2rem;
+    font-weight: bold;
+  }

@@ -1,0 +1,48 @@
+.bg-img{
+    height: 100vh;
+    width: 100%;
+}
+
+.section{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.50) 0%,rgba(0, 0, 0, 0.50) 70%);
+    opacity: 0.8;
+    height: 70vh;
+    width: 90%;
+    margin-top:40px;
+}
+
+.text-animation{
+    font-size: 4em;
+    font-weight:bolder;
+    text-transform: uppercase; 
+    text-shadow:none;
+    background-image: linear-gradient(to right, yellow, tomato, #5485d0, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    background-size: 300%;
+    background-position: -100%;  
+    animation: animatedText 5s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+    to{
+      background-position: 100%; 
+    }
+}
+/* 
+.bg-menu-banner{
+    background-image: url('../../../assets/asset/menu/banner3.jpg');
+} */
+
+/* .bg-shop-banner{
+    background-image: url('../../../assets/asset/shop/banner2.jpg');
+} */
+
+/* .bg-contact-banner{
+    background-image: url('../../../assets/asset/contact/banner.jpg');
+} */
+
+/* .bg-reservation-banner{
+    background-image: url('../../../assets/asset/reservation/category-pizza.jpg');
+} */
