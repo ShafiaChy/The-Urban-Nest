@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/asset/home/latestnews.jpg'
+import image from '../../assets/asset/home/02.jpg'
 import Title from '../shared/Title/Title';
 
 const LatestNews = () => {
@@ -9,13 +9,13 @@ const LatestNews = () => {
             <Title type={{ smallHeading: 'From our blog', title: 'Latest News', border: 'white' }}></Title>
 
             <div className="relative z-10 md:flex justify-center items-center">
-                <div>
-                    <img src={image} />
+                <div className='w-11/12'>
+                    <img  src={image} />
                 </div>
 
                 <div className='md:ml-10'>
                     <small>March 20, 2023</small>
-                    <h1 className='uppercase'>Where Can I get some?</h1>
+                    <h1 className='uppercase text-5xl mb-5'>Where Can I get some?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate facere, deserunt dolores maiores quod nobis quas quasi. Eaque repellat recusandae ad laudantium tempore consequatur consequuntur omnis ullam maxime tenetur.</p>
 
                     <button className="btn border-b-4 border-white  border-0 bg-transparent text-white uppercase mt-10">Read More</button>

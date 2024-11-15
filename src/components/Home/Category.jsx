@@ -17,28 +17,28 @@ const Category = () => {
   const images = [
     {
       slide: image1,
-      name: 'SALADS'
+      name: 'Bed Room'
     },
     {
       slide: image2,
-      name: 'SOUPS'
+      name: 'Dining Room'
     },
     {
       slide: image3,
-      name: 'PIZZAS'
+      name: 'Living Room'
     },
     {
       slide: image4,
-      name: 'DESSERTS'
+      name: 'Outdoor'
     },
     {
       slide: image5,
-      name: 'DRINKS'
+      name: 'Office'
     }
   ];
   return (
     <div  >
-      <Title type={{ smallHeading: 'From 11:00am to 10:00pm', title: 'ORDER ONLINE' }}></Title>
+      <Title type={{ smallHeading: 'Discover stylish and functional furniture pieces to elevate every room in your home', title: 'ORDER ONLINE' }}></Title>
       <div className="flex justify-center">
 
 
@@ -71,8 +71,8 @@ const Category = () => {
           className="mySwiper w-11/12"
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="slide container" ><img className="flex mx-auto" src={image.slide} alt="" />
-              <h1 className="text-overlay text-3xl">{image.name}</h1></SwiperSlide>
+            <SwiperSlide key={index} className="slide container" ><img className="h-full w-11/12 flex mx-auto" src={image.slide} alt="" />
+              <h1 className="text-overlay text-3xl text-center w-full">{image.name}</h1></SwiperSlide>
           ))}
         </Swiper>
       </div>
