@@ -28,7 +28,12 @@
     font-weight: bold;
     padding: 10px;
   }
-   */
+   */.carousel {
+    display: flex;
+    justify-content: space-around;
+  
+}
+
    .carousel .carousel {
   
     width: 100% !important;

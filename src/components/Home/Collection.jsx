@@ -5,7 +5,7 @@ import Card from '../shared/Card/Card'
 import Spinner2 from "../shared/Spinner/Spinner2";
 import Title from '../shared/Title/Title';
 
-const Menu = () => {
+const Collection = () => {
   const [items, loading] = useItems();
   if (loading) {
     return <Spinner2></Spinner2>
@@ -13,7 +13,7 @@ const Menu = () => {
   return (
     <div >
 
-      <Title type={{ smallHeading: 'Check it out', title: 'FROM OUR MENU' }}></Title>
+      <Title type={{ smallHeading: 'Check it out', title: 'From Our Collection' }}></Title>
       <div className="grid md:grid-cols-2 gap-5 px-10">
 
         {items?.filter(item => item.category.includes('popular')).map((menuItem, index) => (
@@ -34,4 +34,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default Collection;

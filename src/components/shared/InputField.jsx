@@ -3,7 +3,7 @@ import React from 'react';
 const InputField = ({ label, name, type, placeholder, value, onChange, disabled, defaultValue }) => {
     return (
         <div className="mb-4">
-            <label className="text-gray-700 font-semibold mb-1 block" htmlFor={name}>
+            <label className="text-white font-semibold mb-1 block" htmlFor={name}>
                 {label}<sup>*</sup>
             </label>
             <input

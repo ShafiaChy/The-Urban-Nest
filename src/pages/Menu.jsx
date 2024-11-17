@@ -21,13 +21,13 @@ const Menu = () => {
     return (
         <div>
             <Helmet>
-                <title>BB Restaurant |  Menu</title>
+                <title>UN Furniture |  Catalog</title>
             </Helmet>
 
             {/* <Banner2 banner={{ title: 'Our Menu', description: 'Would you like to try a dish?', image: 'bg-menu-banner' }}></Banner2> */}
 
             <Parallax blur={{ min: -30, max: 30 }} bgImage={img1} bgImageAlt="menu banner" strength={200}>
-                <Banner2 banner={{ title: 'Our Menu', description: 'Would you like to try a dish?' }}></Banner2>
+                <Banner2 banner={{ title: 'Our Collection', description: 'Would you like to try our furniture?' }}></Banner2>
             </Parallax>
 
             <div>

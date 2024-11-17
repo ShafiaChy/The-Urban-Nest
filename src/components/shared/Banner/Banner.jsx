@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import SliderOne from '../../../assets/asset/home/03.jpg'
 import SliderTwo from '../../../assets/asset/home/02.jpg'
 import SliderThree from '../../../assets/asset/home/01.jpg'
-import SliderFour from '../../../assets/asset/home/04.jpg'
+import SliderFour from '../../../assets/asset/home/01.jpg'
 
 
 const Banner = ({ banner }) => {

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Title from '../shared/Title/Title';
+import './Testimonials.css'
 import { FaStar, FaQuoteLeft } from 'react-icons/fa';
-import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Rating from 'react-rating';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import Rating from 'react-rating';
+
+
 import { useQuery } from '@tanstack/react-query';
 
 const Testimonials = () => {
@@ -19,34 +17,43 @@ const Testimonials = () => {
             return data;
         }
     });
-
-
+    const [checked, setChecked] = useState(true);
+console.log(reviews)
     return (
-        <div>
-            <Title type={{ smallHeading: 'What Our Clients Say', title: 'Testimonials' }}></Title>
+        <div className="review-layout bg-black overflow-x-hidden">
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input
+          type="radio"
+          name="position"
+          defaultChecked={checked}
+          onChange={() => setChecked(!checked)}
+        />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <main id="carousel">
+          {reviews.map((review) => (
+            <div className="item card-color">
+              <div className="container ">
+                <h3 className="mt-6 underline text-2xl text-white text-center text-decoration-underline">
+                  {review.name}
+                </h3>
+                <p className="text-justify p-8 text-white h-80">{review.details}</p>
+                <div className="d-flex p-4 text-center bg-dark">
+                  
+                 <Rating
 
-            {/* //happy */}
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                {
-                    reviews?.map((review, index) =>
-                        <SwiperSlide key={index} >
-                            <div className='w-8/12 flex mx-auto mb-10'>
-                                <div className='text-center'>
-                                    <Rating
-                                        initialRating={review.rating}
-                                        readonly
-                                        emptySymbol={<FaStar color="#ccc" size="2em" />} // Set the empty star icon and color
-                                        fullSymbol={<FaStar color="#d1a054" size="2em" />} // Set the full star icon and color
-                                    />
-                                    <FaQuoteLeft className='flex mx-auto text-black text-7xl my-10' />
-                                    <p>{review.details}</p>
-                                    <small className='text-yellow-700 uppercase text-2xl'>{review.name}</small>
-                                </div>
-                            </div>
-                        </SwiperSlide>)
-                }
-            </Swiper>
-        </div>
+                 initialRating={review.rating}
+                 readonly
+                 emptySymbol={<FaStar color="#ccc" size="2em" />} // Set the empty star icon and color
+                 fullSymbol={<FaStar color="#d1a054" size="2em" />} // Set the full star icon and color
+                />
+                </div>
+              </div>
+            </div>
+          ))}
+        </main>
+      </div>
     );
 };
 

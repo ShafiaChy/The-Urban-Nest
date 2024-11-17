@@ -16,7 +16,7 @@
     font-weight:bolder;
     text-transform: uppercase; 
     text-shadow:none;
-    background-image: linear-gradient(to right, yellow, tomato, #5485d0, #64f38c);
+    background-image: linear-gradient(to right, yellow, tomato);
     -webkit-background-clip: text; 
     background-clip: text; 
     color: transparent;

@@ -57,8 +57,8 @@ const ContactForm = () => {
 
     return (
 
-        <div className="bg-[#eceae380] mt-20 mx-20 p-6">
-            <form className="rounded-lg p-8" onSubmit={sendEmail}>
+        <div className="border border-white mb-20 mt-20 mx-20 p-6">
+            <form className="rounded-lg px-8 pt-4 pb-8" onSubmit={sendEmail}>
                 <div className="flex flex-wrap -mx-4 mb-4">
                     <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0">
                         <InputField
@@ -92,7 +92,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-700 font-semibold mb-1 block" htmlFor="message">
+                    <label className="text-white font-semibold mb-1 block" htmlFor="message">
                         Message<sup>*</sup>
                     </label>
                     <textarea
