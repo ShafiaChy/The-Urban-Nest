@@ -5,6 +5,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 import './Header.css'
 import useCarts from '../../../Hooks/useCarts';
 import useAdmin from '../../../Hooks/useAdmin';
+import profile from '../../../assets/others/boy.png'
 
 // https://daisyui.com/components/navbar/
 // responsive (dropdown menu on small screen, center menu on large screen)
@@ -82,7 +83,7 @@ const Header = () => {
                                 ? (
                                     <div className="avatar lg:flex lg:items-center">
                                         <div className="w-10 h-10 ml-4 lg:ml-3 lg:mr-3 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                            <img src={user?.photoURL || ""} alt="photoURL" />
+                                            <img src={user?.photoURL || profile} alt="photoURL" />
                                         </div>
                                     </div>
                                 )

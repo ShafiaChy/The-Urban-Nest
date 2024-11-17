@@ -12,7 +12,7 @@ const Pagination = ({ category }) => {
     const [page, setPage] = useState(0)
 
     async function fetchItems(page = 0) {
-        const url = `https://bistro-boss-server.vercel.app/items?page=${page}&size=6&category=${category}`;
+        const url = `http://localhost:5000/items?page=${page}&size=6&category=${category}`;
         const { data } = await axios.get(url)
         // console.log(data)
         return data
@@ -54,7 +54,7 @@ const Pagination = ({ category }) => {
 
                         <div className="flex mt-10 items-center h-40">
                             <button
-                                className={page === 0 ? 'btn hover:bg-[#d1a054] ml-10 rounded-full' : 'btn hover:bg-[#d1a054] bg-transparent text-black ml-10 rounded-full'}
+                                className={page === 0 ? ' btn hover:bg-[#d1a054] ml-10 rounded-full' : 'btn hover:bg-[#d1a054] bg- text-black ml-10 rounded-full'}
                                 onClick={() => setPage((old) => Math.max(old - 1, 0))}
                                 disabled={page === 0}
                             >
@@ -62,7 +62,7 @@ const Pagination = ({ category }) => {
                             </button>
                             <div className="mx-3"> {page + 1} / {Math.ceil(data?.count / 6)} </div>
                             <button
-                                className={isPlaceholderData || data?.products.length < 6 ? 'btn hover:bg-[#d1a054] rounded-full' : 'btn hover:bg-[#d1a054] bg-transparent text-black rounded-full'}
+                                className={isPlaceholderData || data?.products.length < 6 ? ' btn hover:bg-[#d1a054] rounded-full' : 'btn hover:bg-[#d1a054] bg-transparent text-black rounded-full'}
                                 onClick={() => {
                                     setPage((old) => (data?.products.length ? old + 1 : old))
                                 }}

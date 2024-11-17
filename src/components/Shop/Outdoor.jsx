@@ -1,24 +1,15 @@
 import React from 'react';
 import Pagination from '../shared/Pagination/Pagination';
 
-const Salad = () => {
-
+const Outdoor = () => {
     return (
         <Pagination
-            category='salad'
+            category='Outdoor'
         />
     );
 };
 
-export default Salad;
-
-
-
-
-
-
-
-
+export default Outdoor;
 
 
 
@@ -38,15 +29,12 @@ export default Salad;
 // import Spinner2 from '../shared/Spinner/Spinner2';
 // import usePagination from '../../Hooks/usePagination';
 // import Pagination from '../shared/Pagination/Pagination';
-
-// const Salad = () => {
-//     const [items, count, page, size, setPage,loading] = usePagination('salad');
+// const Drinks = () => {
+//     const [items, count, page, size, setPage,loading] = usePagination('drinks');
 //     const pages = Math.ceil(count / size);
 //     if (loading) {
 //         return <Spinner2></Spinner2>
 //     }
-
-
 //     return (
 //         <div>
 //             <div className="grid md:grid-cols-3 gap-x-2 gap-y-10 mt-10 place-items-center">
@@ -76,4 +64,4 @@ export default Salad;
 //     );
 // };
 
-// export default Salad;
+// export default Drinks;

@@ -104,17 +104,10 @@
     border: 1px solid white;
   }
 
-  .review-layout input[type="radio"] {
-    appearance: none; /* Remove default radio button styling */
  
-    background: rgba(169, 169, 169, 0.748); /* Transparent background */
-    border: 1px solid transparent; /* Transparent border */
-    width: 12px; /* Set a width (optional) */
-    height: 12px; /* Set a height (optional) */
-    cursor: pointer;
-  }
   
-  .review-layout input[type="radio"]:focus {
-    outline: none; /* Remove blue focus outline */
-    box-shadow: none; /* Remove additional focus styling */
+
+  .testimonial{
+    background-image: url('../../assets/asset/home/bg-image.jpg');
+   
   }

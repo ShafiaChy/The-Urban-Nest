@@ -7,12 +7,13 @@ import Rating from 'react-rating';
 
 
 import { useQuery } from '@tanstack/react-query';
+import Title from '../shared/Title/Title';
 
 const Testimonials = () => {
     const { data: reviews = [], refetch } = useQuery({
         queryKey: ['reviews'],
         queryFn: async () => {
-            const res = await fetch("https://bistro-boss-server.vercel.app/reviews");
+            const res = await fetch("http://localhost:5000/reviews");
             const data = await res.json();
             return data;
         }
@@ -20,7 +21,10 @@ const Testimonials = () => {
     const [checked, setChecked] = useState(true);
 console.log(reviews)
     return (
-        <div className="review-layout bg-black overflow-x-hidden">
+        <div className=''>
+            <Title type={{ smallHeading: "Let's Hear From Our Customers", title: 'Testimonials' }}></Title>
+        <div className="py-8  review-layout bg-fixed testimonial">
+   
         <input type="radio" name="position" />
         <input type="radio" name="position" />
         <input
@@ -38,7 +42,14 @@ console.log(reviews)
                 <h3 className="mt-6 underline text-2xl text-white text-center text-decoration-underline">
                   {review.name}
                 </h3>
-                <p className="text-justify p-8 text-white h-80">{review.details}</p>
+                <p className="text-justify p-8 text-white h-52">{review.details}</p>
+                <div className='flex justify-center'>
+                <img
+                    src={review.image} // Make sure to replace with the correct image source
+                    alt="Reviewer"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-white"
+                />
+                </div>
                 <div className="d-flex p-4 text-center bg-dark">
                   
                  <Rating
@@ -49,10 +60,12 @@ console.log(reviews)
                  fullSymbol={<FaStar color="#d1a054" size="2em" />} // Set the full star icon and color
                 />
                 </div>
+              
               </div>
             </div>
           ))}
         </main>
+      </div>
       </div>
     );
 };

@@ -1,30 +1,32 @@
 import React from 'react';
-import Salad from './Salad'
-import Pizza from './Pizza';
-import Soups from './Soups'
-import Desserts from './Desserts';
-import Drinks from './Drinks'
+
+
+import Outdoor from './Outdoor';
+import LivingRoom from './LivingRoom';
+import BedRoom from './BedRoom';
+import DiningRoom from './DiningRoom';
+import Office from './Office';
 
 const shopData = [
     {
-        label: 'SALAD',
-        content: <Salad></Salad>
+        label: 'Outdoor',
+        content: <Outdoor></Outdoor>
     },
     {
-        label: 'PIZZA',
-        content: <Pizza></Pizza>
+        label: 'Living Room',
+        content: <LivingRoom></LivingRoom>
     },
     {
-        label: 'SOUPS',
-        content: <Soups></Soups>
+        label: 'Bed Room',
+        content: <BedRoom></BedRoom>
     },
     {
-        label: 'DESSERTS',
-        content: <Desserts></Desserts>
+        label: 'Dining Room',
+        content: <DiningRoom></DiningRoom>
     },
     {
-        label: 'DRINKS',
-        content: <Drinks></Drinks>
+        label: 'Office',
+        content: <Office></Office>
     },
 ]
 export default shopData;

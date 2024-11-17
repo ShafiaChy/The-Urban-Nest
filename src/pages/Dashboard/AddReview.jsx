@@ -12,9 +12,14 @@ const AddReview = () => {
     const [formData, setFormData] = useState({
         name: '',
         details: '',
-
+        image: null
     });
 
+    const imageHostKey = '40f387f08ab881d665744d10287c41b8';
+    const [imageFile, setImageFile] = useState(null);
+    const handleImageChange = (event) => {
+        setImageFile(event.target.files[0]);
+    };
     const handleChange = (event) => {
         setFormData({
             ...formData,
@@ -26,7 +31,7 @@ const AddReview = () => {
         setFormData({
             name: '',
             details: '',
-
+            image: null
 
         });
     };
@@ -34,33 +39,56 @@ const AddReview = () => {
 
     const handleAddReview = (e) => {
 
+      
         e.preventDefault()
-        formData.rating = rating
-        formData.email = user.email;
-        fetch('https://bistro-boss-server.vercel.app/reviews', {
+        // console.log(formData)
+        // console.log(imageFile)
+
+        const image = imageFile;
+        const imageData = new FormData();
+        imageData.append('image', image);
+
+        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
+        fetch(url, {
             method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(formData)
+            body: imageData
         })
             .then(res => res.json())
-            .then(res => {
-                if (res.insertedId) {
-                    swal({
-                        title: "Yahhh!!! ❤️😍",
-                        text: "Review Added",
-                        icon: "success",
+            .then(imgData => {
+                if (imgData.success) {
+                    // console.log(imgData.data.url);
+                    formData.rating = rating
+                  
+                    formData.email = user?.email;
+                    formData.image = imgData.data.url;
+                    // console.log(formData);
+
+                    fetch('http://localhost:5000/reviews', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
                     })
+                        .then(res => res.json())
+                        .then(res => {
+                            if (res.insertedId) {
+                                swal({
+                                    title: "Yahhh!!! ❤️😍",
+                                    text: "Review Added",
+                                    icon: "success",
+                                })
+                            }
+                            else {
+                                swal({
+                                    title: "Sorry!! ",
+                                    text: "Review Failed To Add 😭 😭 😭",
+                                    icon: "danger",
+                                })
+                            }
+                            handleReset();
+                        })
                 }
-                else {
-                    swal({
-                        title: "Sorry!! ",
-                        text: "Data not Added 😭 😭 😭",
-                        icon: "danger",
-                    })
-                }
-                handleReset();
             })
     }
 
@@ -135,6 +163,15 @@ const AddReview = () => {
                             onChange={handleChange}
                             value={formData.details}
                         />
+                    </div>
+                    <div className="mb-4">
+                        <input
+                            id="image"
+                            name="image"
+                            type="file"
+                            accept="image/*"
+                            onChange={handleImageChange}
+                            required />
                     </div>
 
                     <div className="text-center mt-8">

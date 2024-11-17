@@ -10,13 +10,13 @@ const AddItem = () => {
 
     const categories = [
         { id: 0, name: '<select category>' },
-        { id: 1, name: 'offered' },
-        { id: 2, name: 'popular' },
-        { id: 3, name: 'dessert' },
-        { id: 4, name: 'pizza' },
-        { id: 5, name: 'salad' },
-        { id: 6, name: 'soup' },
-        { id: 7, name: 'drinks' },
+        { id: 1, name: 'Dining Room' },
+        { id: 2, name: 'Living Room' },
+        { id: 3, name: 'Bed Room' },
+        { id: 4, name: 'Outdoor' },
+        { id: 5, name: 'Office' },
+        { id: 6, name: 'Popular' },
+       
     ]
     const { user } = useAuth();
     const imageHostKey = '40f387f08ab881d665744d10287c41b8';
@@ -74,7 +74,7 @@ const AddItem = () => {
                     formData.image = imgData.data.url;
                     // console.log(formData);
 
-                    fetch('https://bistro-boss-server.vercel.app/addItems', {
+                    fetch('http://localhost:5000/addItems', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

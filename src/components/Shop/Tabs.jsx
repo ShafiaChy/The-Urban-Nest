@@ -14,7 +14,7 @@ const Tabs = ({ shopData }) => {
               key={tab.label}
               className={`py-2 border-b-4 font-bold transition-colors duration-300 ${index === activeTabIndex
                   ? "border-yellow-700 text-yellow-700"
-                  : "border-transparent hover:border-gray-200"
+                  : "border-transparent text-white hover:border-gray-200"
                 }`}
 
               onClick={() => { // toggle the active tab on click.

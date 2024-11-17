@@ -7,7 +7,6 @@ import Main from '../../layout/Main';
 import Contact from '../../pages/Contact';
 import Home from '../../pages/Home';
 import Login from '../../pages/Login';
-import Menu from '../../pages/Menu';
 import Registration from '../../pages/Registration';
 import Shop from '../../pages/Shop';
 import MyCart from '../../pages/Dashboard/MyCart';
@@ -24,6 +23,7 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import NotFound from '../../pages/NotFound';
 import MyBookings from '../../pages/Dashboard/MyBookings';
 import Dashboard from './Dashboard';
+import Collection from '../../pages/Collection';
 
 
 const routes = createBrowserRouter([
@@ -41,7 +41,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "/menu",
-        element: <Menu />,
+        element: <Collection />,
       },
       {
         path: "/shop",

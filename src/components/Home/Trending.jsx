@@ -6,17 +6,17 @@ import Spinner2 from '../shared/Spinner/Spinner2';
 import { AuthContext } from '../../contexts/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 
-const ChefRecommends = () => {
+const Trending = () => {
     const [items, loading] = useItems();
     if (loading) {
         return <Spinner2></Spinner2>
     }
-    const specials = items.filter(item => item.category.includes('popular'));
+    const specials = items.filter(item => item.category.includes('Popular'));
     // console.log(specials)
     return (
         <div>
 
-            <Title type={{ smallHeading: 'Should Try', title: 'Chef Recommends' }}></Title>
+            <Title type={{ smallHeading: 'Should Try', title: 'Designer’s Choice' }}></Title>
 
 
             <div className=" grid md:grid-cols-3 gap-x-2 gap-y-10 mt-10 place-items-center md:w-10/12 md:mx-auto">
@@ -34,4 +34,4 @@ const ChefRecommends = () => {
     );
 };
 
-export default ChefRecommends;
+export default Trending;

@@ -16,7 +16,7 @@ const Collection = () => {
       <Title type={{ smallHeading: 'Check it out', title: 'From Our Collection' }}></Title>
       <div className="grid md:grid-cols-2 gap-5 px-10">
 
-        {items?.filter(item => item.category.includes('popular')).map((menuItem, index) => (
+        {items?.filter(item => item.category.includes('Popular')).map((menuItem, index) => (
           <div className="flex space-x-4" key={index}>
             <Card>
               {menuItem}
@@ -27,7 +27,7 @@ const Collection = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <Link to="/menu"><button className="btn btn-outline uppercase border-0 px-14 border-b-4 ">View full menu</button></Link>
+        <Link to="/menu"><button className="text-white btn btn-outline uppercase border-0 px-14 border-b-4 mb-8">View full menu</button></Link>
       </div>
     </div>
 

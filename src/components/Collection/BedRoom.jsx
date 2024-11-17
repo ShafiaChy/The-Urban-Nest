@@ -8,10 +8,10 @@ import { Parallax } from 'react-parallax';
 import img1 from '../../assets/asset/menu/salad-bg.jpg'
 import Banner2 from '../shared/Banner2/Banner2';
 
-const Salad = ({ items }) => {
+const BedRoom = ({ items }) => {
     // console.log(items)
 
-    const salad = items.filter(item => item.category.includes('salad'));
+    const salad = items.filter(item => item.category.includes('Bed Room'));
 
     return (
         <>
@@ -44,10 +44,10 @@ const Salad = ({ items }) => {
             </div>
 
             <div className="flex justify-center mt-10">
-                <Link to="/shop"><button className="btn btn-outline uppercase border-0 px-14 border-b-4 ">Order Your favourite items</button></Link>
+                <Link to="/shop"><button className="text-white btn btn-outline uppercase border-0 px-14 border-b-4 ">Order Your favourite items</button></Link>
             </div>
         </>
     );
 };
 
-export default Salad;
+export default BedRoom;

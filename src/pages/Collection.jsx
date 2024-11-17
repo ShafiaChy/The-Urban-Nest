@@ -1,17 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Dessert from '../components/Menu/Dessert';
-import Offer from '../components/Menu/Offer';
-import Pizza from '../components/Menu/Pizza';
-import Salad from '../components/Menu/Salad';
-import Soup from '../components/Menu/Soup';
+
 import Banner2 from '../components/shared/Banner2/Banner2';
 import Spinner2 from '../components/shared/Spinner/Spinner2';
 import useItems from '../Hooks/useItems';
 import { Parallax } from 'react-parallax';
 import img1 from '../assets/asset/menu/Banner3.jpg'
+import Outdoor from '../components/Collection/Outdoor';
+import DiningRoom from '../components/Collection/DiningRoom';
+import LivingRoom from '../components/Collection/LivingRoom';
+import BedRoom from '../components/Collection/BedRoom';
+import Office from '../components/Collection/Office';
 
-const Menu = () => {
+const Collection = () => {
 
     const [items, loading] = useItems();
     if (loading) {
@@ -31,11 +32,11 @@ const Menu = () => {
             </Parallax>
 
             <div>
-                {items && <Offer items={items}></Offer>}
-                {items && <Dessert items={items}></Dessert>}
-                {items && <Pizza items={items}></Pizza>}
-                {items && <Salad items={items}></Salad>}
-                {items && <Soup items={items}></Soup>}
+                {items && <Outdoor items={items}></Outdoor>}
+                {items && <DiningRoom items={items}></DiningRoom>}
+                {items && <LivingRoom items={items}></LivingRoom>}
+                {items && <BedRoom items={items}></BedRoom>}
+                {items && <Office items={items}></Office>}
             </div>
 
 
@@ -43,4 +44,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default Collection;

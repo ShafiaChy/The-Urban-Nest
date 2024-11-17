@@ -6,6 +6,8 @@ import useAdmin from '../../../Hooks/useAdmin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import './Card.css'
+
 const Cards = ({ children }) => {
     const [, , refetch] = useCarts()
 
@@ -13,15 +15,27 @@ const Cards = ({ children }) => {
     const [isAdmin] = useAdmin(user?.email)
 
     // console.log(refetch)
-    const { image, name, recipe, price } = children;
+    const { image, name, details, price } = children;
     const navigate = useNavigate()
 
     const addToCart = (data) => {
+        if(!isAdmin){
+            toast.error(`You need to login! 🛒`, {
+                position: "bottom-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "colored",
+            });
+        }
 
         if (user.email) {
             data.email = user.email;
             const { image, name, category, price, email } = data;
-            fetch('https://bistro-boss-server.vercel.app/carts', {
+            fetch('http://localhost:5000/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -61,14 +75,15 @@ const Cards = ({ children }) => {
         <div>
             <div className="relative card card-compact w-96 bg-base-100 shadow-xl">
                 <div className='price absolute bg-gray-900 top-2 right-0 px-4 py-2 text-white'>${price}</div>
-                <figure><img src={image} alt="Shoes" /></figure>
-                <div className="card-body place-items-center bg-gray-200">
-                    <h2 className="card-title">{name}</h2>
-                    <p>{recipe}</p>
+                <figure><img className='h-96' src={image} alt="Shoes" /></figure>
+                <div className="card-body bg-cart place-items-center ">
+                    <h2 className="card-title text-white">{name}</h2>
+                    
+                    <p className='text-white text-center p-4'>{details}</p>
                     <div className="card-actions justify-center">
                         <button
-                            disabled={isAdmin ? true : false}
-                            onClick={() => addToCart(children)} className="btn  uppercase bg-gray-300 border-b-2 border-0 border-yellow-700 text-yellow-700 ">Add to cart</button>
+                          
+                            onClick={() => addToCart(children)} className="btn uppercase bg-orange-500 border-b-2 border-0 border-yellow-700">Add to cart</button>
                     </div>
                 </div>
                 <ToastContainer

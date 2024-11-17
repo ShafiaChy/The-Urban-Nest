@@ -1,15 +1,20 @@
 import React from 'react';
 import Pagination from '../shared/Pagination/Pagination';
 
-const Soups = () => {
+const DiningRoom = () => {
     return (
         <Pagination
-            category='soup'
+            category='Dining Room'
         />
     );
 };
 
-export default Soups;
+export default DiningRoom;
+
+
+
+
+
 
 
 
@@ -25,18 +30,16 @@ export default Soups;
 
 
 // import React from 'react';
-// import Pagination from '../shared/Pagination/Pagination';
 // import Cards from '../shared/Card/Card2';
 // import Spinner2 from '../shared/Spinner/Spinner2';
 // import usePagination from '../../Hooks/usePagination';
-
-// const Soups = () => {
-//     const [items, count, page, size, setPage,loading] = usePagination('soup');
+// import Pagination from '../shared/Pagination/Pagination';
+// const Desserts = () => {
+//     const [items, count, page, size, setPage,loading] = usePagination('dessert');
 //     const pages = Math.ceil(count / size);
 //     if (loading) {
 //         return <Spinner2></Spinner2>
 //     }
-//     console.log(items)
 //     return (
 //         <div>
 //             <div className="grid md:grid-cols-3 gap-x-2 gap-y-10 mt-10 place-items-center">
@@ -57,12 +60,13 @@ export default Soups;
 //                         page={page}
 //                         count={count}
 //                         setPage={setPage}
-//                     ></Pagination>
+//                     >
+
+//                     </Pagination>
 //                 }
 //             </div>
-
 //         </div>
 //     );
 // };
 
-// export default Soups;
+// export default Desserts;

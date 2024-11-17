@@ -20,7 +20,7 @@ const Footer = () => {
        // Footer.js
 
 
-    <footer className="bg-black text-white py-10 px-5">
+    <footer className="bg-black text-white py-10 px-5 mt-16">
       <div className="flex flex-wrap justify-between gap-10">
         {/* Logo & Description */}
         <div className="max-w-xs">

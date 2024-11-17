@@ -20,7 +20,7 @@ const CheckoutForm = ({ order }) => {
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
         if (total) {
-            fetch("https://bistro-boss-server.vercel.app/create-payment-intent", {
+            fetch("http://localhost:5000/create-payment-intent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const CheckoutForm = ({ order }) => {
                 order,
                 name:user.displayName
             }
-            fetch('https://bistro-boss-server.vercel.app/payments', {
+            fetch('http://localhost:5000/payments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -100,7 +100,7 @@ const CheckoutForm = ({ order }) => {
                 .then(data => {
                     console.log(data);
                     if (data.insertedId) {
-                        fetch(`https://bistro-boss-server.vercel.app/carts?email=${user.email}&delete=true`, {
+                        fetch(`http://localhost:5000/carts?email=${user.email}&delete=true`, {
                             method: 'DELETE',
 
                         })

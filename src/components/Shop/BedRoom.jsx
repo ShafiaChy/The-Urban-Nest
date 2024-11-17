@@ -1,15 +1,19 @@
 import React from 'react';
 import Pagination from '../shared/Pagination/Pagination';
 
-const Desserts = () => {
+const BedRoom = () => {
+
     return (
         <Pagination
-            category='dessert'
+            category='Bed Room'
         />
     );
 };
 
-export default Desserts;
+export default BedRoom;
+
+
+
 
 
 
@@ -34,12 +38,15 @@ export default Desserts;
 // import Spinner2 from '../shared/Spinner/Spinner2';
 // import usePagination from '../../Hooks/usePagination';
 // import Pagination from '../shared/Pagination/Pagination';
-// const Desserts = () => {
-//     const [items, count, page, size, setPage,loading] = usePagination('dessert');
+
+// const Salad = () => {
+//     const [items, count, page, size, setPage,loading] = usePagination('salad');
 //     const pages = Math.ceil(count / size);
 //     if (loading) {
 //         return <Spinner2></Spinner2>
 //     }
+
+
 //     return (
 //         <div>
 //             <div className="grid md:grid-cols-3 gap-x-2 gap-y-10 mt-10 place-items-center">
@@ -69,4 +76,4 @@ export default Desserts;
 //     );
 // };
 
-// export default Desserts;
+// export default Salad;
