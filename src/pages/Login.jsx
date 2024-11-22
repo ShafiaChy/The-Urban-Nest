@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import illustration from "../assets/others/authentication2.png";
+import illustration from "../assets/others/bg-authentication.jpg";
 import SocialAuth from "../components/SocialAuth";
 import { AuthContext } from "../contexts/AuthProvider";
 import useToken from "../Hooks/useToken";
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -65,56 +66,58 @@ const Login = () => {
     }
   }
   return (
-    <div className="bg-authentication min-h-screen flex items-center">
+    <div className="bg-login  h-min-screen flex items-center">
       {
         user && navigate(from, { replace: true })
       }
-      <section className="container mx-auto p-12 my-10 login-div">
-        <div className="grid md:grid-cols-2">
-          <div className="">
+      <section >
+        <div className="grid  md:grid-cols-2 ">
+          <div className=" border-r-2 border-white">
             <Helmet>
-              <title>BB Restaurant |  Login</title>
+              <title>UN Furniture |  Login</title>
             </Helmet>
+            
             <img
               src={illustration}
-              className="h-4/5 block mx-auto"
+              className="bg-cover block mx-auto"
               alt="Password_image"
             />
+           
           </div>
           <div className="">
-            <h1 className="font-bold text-center text-3xl">Login</h1>
+            <h1 className="text-white mt-16 font-bold text-center text-3xl">Login</h1>
             <form onSubmit={handleSubmit} className="md:w-1/2 mx-auto">
               {/* Input field with level from daisyui */}
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className=" form-control  mb-6">
                 <label className="label">
-                  <span className="label-text font-bold">Email</span>
+                  <span className="text-white label-text font-bold">Email</span>
                 </label>
                 <input
                   type="text"
                   name="email"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input bg-slate-300  input-bordered w-full "
                 />
               </div>
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className="form-control w-full mb-6">
                 <label className="label">
-                  <span className="label-text font-bold">Password</span>
+                  <span className="text-white  label-text font-bold">Password</span>
                 </label>
                 <input
                   type="password"
                   name="password"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input bg-slate-300 input-bordered w-full "
                 />
               </div>
              
-              < LoadCanvasTemplate reloadColor="red" />
+              < LoadCanvasTemplate reloadColor="gray" />
               <input
                 type="text"
                 name="text"
                 placeholder="Type here"
                 onBlur={handleCaptcha}
-                className="input input-bordered w-full max-w-xs"
+                className="input bg-slate-300 input-bordered w-full max-w-xs"
               />
               <div className="form-control w-full max-w-xs mb-6">
                 <input
@@ -136,7 +139,7 @@ const Login = () => {
             </div>
 
             <div className="md:w-1/2 mx-auto">
-              <p className="font-semibold text-center my-6">Or sign in with</p>
+              <p className="font-semibold text-center my-6 text-white">Or sign in with</p>
               {/* Separate component for Social login  */}
               <SocialAuth />
             </div>

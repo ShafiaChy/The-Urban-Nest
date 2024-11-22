@@ -1,0 +1,10 @@
+.bg-login{
+    background-color: #171717; /* Base color */
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.02) 75%, rgba(255, 255, 255, 0.02)),
+                      linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.02) 75%, rgba(255, 255, 255, 0.02));
+    background-size: 4px 4px;
+    opacity: 15;
+}
+#canv{
+    background-color: cadetblue !important;
+}

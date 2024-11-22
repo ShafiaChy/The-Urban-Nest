@@ -21,9 +21,9 @@ const Testimonials = () => {
     const [checked, setChecked] = useState(true);
 console.log(reviews)
     return (
-        <div className=''>
+        <div className='overflow-x-hidden'>
             <Title type={{ smallHeading: "Let's Hear From Our Customers", title: 'Testimonials' }}></Title>
-        <div className="py-8  review-layout bg-fixed testimonial">
+        <div className="py-8 review-layout bg-fixed testimonial">
    
         <input type="radio" name="position" />
         <input type="radio" name="position" />

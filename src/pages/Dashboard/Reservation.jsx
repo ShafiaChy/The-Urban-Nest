@@ -9,7 +9,7 @@ const Reservation = () => {
     return (
         <div className='bg-white'>
             <Helmet>
-                <title>BB Restaurant |  Reservation</title>
+                <title>UN Restaurant  |  Reservation</title>
             </Helmet>
             <div className='h-52'>
 

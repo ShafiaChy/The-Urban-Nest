@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from "react-router-dom";
-import illustration from "../assets/others/authentication2.png";
+import illustration from "../assets/others/bg-authentication2.jpg";
 import SocialAuth from "../components/SocialAuth";
 import { AuthContext } from "../contexts/AuthProvider";
 import useToken from "../Hooks/useToken";
@@ -79,54 +79,54 @@ const Registration = () => {
       })
   }
   return (
-    <div className="bg-authentication min-h-screen flex items-center">
-      <section className="mx-auto p-12 my-10 login-div">
+    <div className="bg-login min-h-screen flex items-center">
+      <section >
         <div className="grid md:grid-cols-2">
-          <div className="">
+          <div className="pt-16 border-r-2 border-white">
             <Helmet>
-              <title>BB Restaurant |  Registration</title>
+              <title>UN Furniture |  Registration</title>
             </Helmet>
-            <h1 className="font-bold text-center text-3xl">Sign Up</h1>
+            <h1 className="text-white font-bold text-center text-3xl">Sign Up</h1>
             <form onSubmit={handleSubmit} className="md:w-1/2 mx-auto">
               {/* Input field with level from daisyui */}
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className="form-control w-full mb-6">
                 <label className="label">
-                  <span className="label-text font-bold">Name</span>
+                  <span className="text-white label-text font-bold">Name</span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   placeholder="Type here"
-                  className="input input-bordered max-w-xs"
+                  className="input input-bordered "
                 />
               </div>
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className="form-control w-full  mb-6">
                 <label className="label">
-                  <span className="label-text font-bold">Email</span>
+                  <span className="text-white label-text font-bold">Email</span>
                 </label>
                 <input
                   type="text"
                   name="email"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full "
                 />
               </div>
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className="form-control w-full  mb-6">
                 <label className="label">
-                  <span className="label-text font-bold">Password</span>
+                  <span className="text-white label-text font-bold">Password</span>
                 </label>
                 <input
                   type="password"
                   name="password"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full "
                 />
               </div>
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className="form-control w-full  mb-6">
                 <input
                   type="submit"
                   value={"Sign Up"}
-                  className="input input-bordered text-white w-full max-w-xs bg-[#d1a054] cursor-pointer"
+                  className="input input-bordered text-white w-full  bg-[#d1a054] cursor-pointer"
                 />
               </div>
             </form>
@@ -136,7 +136,7 @@ const Registration = () => {
               </p>
             </div>
             <div className="md:w-1/2 mx-auto">
-              <p className="font-semibold text-center my-6">Or sign up with</p>
+              <p className="text-white font-semibold text-center my-6">Or sign up with</p>
               {/* Separate component for Social login  */}
               <SocialAuth saveUser={saveUser} />
             </div>
@@ -145,7 +145,7 @@ const Registration = () => {
           <div className="">
             <img
               src={illustration}
-              className="h-4/5 block mx-auto"
+              className="bg-cover block mx-auto"
               alt="Password_image"
             />
           </div>

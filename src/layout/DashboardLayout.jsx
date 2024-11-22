@@ -28,8 +28,8 @@ const DashboardLayout = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
 
           <ul className="menu font-bold text bg-[#d1a054] p-4 w-80 text-base-content dashboard-style">
-            <div className='ml-5 mb-10'> <h1 className='text-3xl'>Bistro Boss</h1>
-              <small className='block text-xs font-thin ml-1' style={{ letterSpacing: '8px' }}>Restaurant</small>
+            <div className='ml-5 mb-10'> <h1 className='text-3xl'>UrbanNest</h1>
+              <small className='block text-xs font-thin ml-1' style={{ letterSpacing: '8px' }}>Furniture</small>
             </div>
 
            {

@@ -17,8 +17,8 @@ const MyCart = () => {
     const [couponPercent, setCouponPercent] = useState(0);
   
     console.log(couponCode)
-    let total = carts ? carts?.reduce((acc, order) => acc + order.price, 0) : 0;
- 
+    let total = carts ? carts?.reduce((acc, order) => acc + Number(order.price), 0) : 0;
+    console.log(total, carts)
 
     const handleApplyCoupon = () => {
         setShowInput(!showInput);
@@ -42,13 +42,15 @@ const MyCart = () => {
             .then(data => {
                 console.log(data)
                 if (data.deletedCount > 0) {
+                    console.log(data.deletedCount)
                     swal(`Poof! Your item has been deleted!`, {
                         icon: "success",
                     });
+                    refetch();
                 }
 
             });
-        refetch();
+       
     }
 
 
@@ -143,7 +145,7 @@ const MyCart = () => {
 
                 <div className='flex justify-between items-center text-3xl text mb-4 font-bold'>
 
-                    <h1 >Total orders: {carts.length}</h1><h1>Total Price: ${couponPrice ? couponPrice.toFixed(2) : total.toFixed(2)}</h1> <button onClick={handlePayment} className='btn bg-[#d1a054] py-2 border-0 px-5'>Pay</button>
+                    <h1 >Total orders: {carts.length}</h1><h1>Total Price: ${couponPrice ? couponPrice?.toFixed(2) : total?.toFixed(2)}</h1> <button onClick={handlePayment} className='btn bg-[#d1a054] py-2 border-0 px-5'>Pay</button>
                 </div>
                 <div className="overflow-x-auto">
                     <table className="table w-full">

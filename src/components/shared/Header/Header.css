@@ -1,6 +1,7 @@
 .header{
     box-shadow: inset 100px 50px 80px black;
     height:100px;
+    
 }
 
 .active-style a.active{

@@ -24,7 +24,7 @@ const AdminHome = () => {
     return (
         <div className="mt-8">
             <Helmet>
-                <title>BB Restaurant |  Admin Home</title>
+                <title>UN Furniture |  Admin Home</title>
             </Helmet>
             <h2 className="text text-animation p-4 text-3xl normal-case">Hi, Welcome Back!</h2>
 

@@ -14,12 +14,13 @@ const Cards = ({ children }) => {
     const { user } = useAuth()
     const [isAdmin] = useAdmin(user?.email)
 
-    // console.log(refetch)
+    console.log(isAdmin)
     const { image, name, details, price } = children;
     const navigate = useNavigate()
 
     const addToCart = (data) => {
-        if(!isAdmin){
+        if(isAdmin || !user?.email){
+            console.log("hi")
             toast.error(`You need to login! 🛒`, {
                 position: "bottom-right",
                 autoClose: 1000,
@@ -32,7 +33,7 @@ const Cards = ({ children }) => {
             });
         }
 
-        if (user.email) {
+        else if (user?.email) {
             data.email = user.email;
             const { image, name, category, price, email } = data;
             fetch('http://localhost:5000/carts', {
