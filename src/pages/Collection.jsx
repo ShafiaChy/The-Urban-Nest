@@ -5,7 +5,7 @@ import Banner2 from '../components/shared/Banner2/Banner2';
 import Spinner2 from '../components/shared/Spinner/Spinner2';
 import useItems from '../Hooks/useItems';
 import { Parallax } from 'react-parallax';
-import img1 from '../assets/asset/menu/Banner3.jpg'
+import img1 from '../assets/asset/menu/banner3.jpg'
 import Outdoor from '../components/Collection/Outdoor';
 import DiningRoom from '../components/Collection/DiningRoom';
 import LivingRoom from '../components/Collection/LivingRoom';

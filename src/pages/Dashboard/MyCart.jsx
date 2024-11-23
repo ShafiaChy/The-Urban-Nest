@@ -34,7 +34,7 @@ const MyCart = () => {
 
     const handleDeleteItem = (cart) => {
 
-        fetch(`http://localhost:5000/carts?email=${cart.email}&id=${cart._id}&delete=false`, {
+        fetch(`https://the-urban-nest-server.vercel.app/carts?email=${cart.email}&id=${cart._id}&delete=false`, {
             method: 'DELETE',
 
         })
@@ -65,7 +65,7 @@ const MyCart = () => {
         e.preventDefault()
         setIsDisabled(!isDisabled)
         
-        fetch(`http://localhost:5000/coupons?coupon_code=${couponCode}`)
+        fetch(`https://the-urban-nest-server.vercel.app/coupons?coupon_code=${couponCode}`)
             .then(res => res.json())
             .then(data => {
                 

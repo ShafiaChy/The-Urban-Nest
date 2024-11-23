@@ -119,7 +119,7 @@ const Login = () => {
                 onBlur={handleCaptcha}
                 className="input bg-slate-300 input-bordered w-full max-w-xs"
               />
-              <div className="form-control w-full max-w-xs mb-6">
+              <div className="form-control w-full  mb-6">
                 <input
 
                   type="submit"

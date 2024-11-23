@@ -74,7 +74,7 @@ const AddItem = () => {
                     formData.image = imgData.data.url;
                     // console.log(formData);
 
-                    fetch('http://localhost:5000/addItems', {
+                    fetch('https://the-urban-nest-server.vercel.app/addItems', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -66,7 +66,7 @@ const UpdateItem = () => {
 
     const handleUpdate = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:5000/items/${id}`, {
+        fetch(`https://the-urban-nest-server.vercel.app/items/${id}`, {
             method: 'PATCH',
             headers: {
                 //     authorization: `bearer ${localStorage.getItem('accessToken')}`

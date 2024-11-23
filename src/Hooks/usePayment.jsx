@@ -5,7 +5,7 @@ const usePayment = () => {
     const [revenue, setRevenue] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allPayments`)
+        fetch(`https://the-urban-nest-server.vercel.app/allPayments`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)

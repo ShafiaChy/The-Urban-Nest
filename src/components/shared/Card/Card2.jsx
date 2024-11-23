@@ -19,9 +19,22 @@ const Cards = ({ children }) => {
     const navigate = useNavigate()
 
     const addToCart = (data) => {
-        if(isAdmin || !user?.email){
-            console.log("hi")
+        if( !user?.email){
+           
             toast.error(`You need to login! 🛒`, {
+                position: "bottom-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: 0,
+                theme: "colored",
+            });
+        }
+        else if( !isAdmin){
+           
+            toast.error(`You can't add admin! 🛒`, {
                 position: "bottom-right",
                 autoClose: 1000,
                 hideProgressBar: false,
@@ -36,7 +49,7 @@ const Cards = ({ children }) => {
         else if (user?.email) {
             data.email = user.email;
             const { image, name, category, price, email } = data;
-            fetch('http://localhost:5000/carts', {
+            fetch('https://the-urban-nest-server.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

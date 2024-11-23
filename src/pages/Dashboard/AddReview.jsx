@@ -63,7 +63,7 @@ const AddReview = () => {
                     formData.image = imgData.data.url;
                     // console.log(formData);
 
-                    fetch('http://localhost:5000/reviews', {
+                    fetch('https://the-urban-nest-server.vercel.app/reviews', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

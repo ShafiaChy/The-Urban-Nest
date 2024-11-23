@@ -17,7 +17,7 @@ const ManageItems = () => {
     const handleDeleteItem = (id) => {
 
         console.log(items)
-        fetch(`http://localhost:5000/items/${id}`, {
+        fetch(`https://the-urban-nest-server.vercel.app/items/${id}`, {
             method: 'DELETE',
             // headers: {
             //     authorization: `bearer ${localStorage.getItem('accessToken')}`
