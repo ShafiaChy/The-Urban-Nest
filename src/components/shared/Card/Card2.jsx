@@ -32,7 +32,7 @@ const Cards = ({ children }) => {
                 theme: "colored",
             });
         }
-        else if( !isAdmin){
+        else if(isAdmin){
            
             toast.error(`You can't add admin! 🛒`, {
                 position: "bottom-right",
