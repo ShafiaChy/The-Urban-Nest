@@ -14,6 +14,7 @@ const PaymentHistory = () => {
             return data;
         }
     });
+    console.log(payments)
     return (
         <>
             <Helmet>

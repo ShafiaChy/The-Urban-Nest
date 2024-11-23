@@ -2,7 +2,7 @@ import React from 'react';
 
 import useAdmin from '../../Hooks/useAdmin';
 import useAuth from '../../Hooks/useAuth';
-import { redirect } from 'react-router-dom';
+
 import AdminHome from '../../pages/Dashboard/AdminHome';
 import UserHome from '../../pages/Dashboard/UserHome';
 import Spinner2 from '../../components/shared/Spinner/Spinner2';

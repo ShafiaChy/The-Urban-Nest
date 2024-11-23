@@ -9,7 +9,7 @@ const NotFound = () => {
     return (
         <div className="text-center w-11/12 h-screen">
             <Helmet>
-                <title>BB Restaurant |  404 </title>
+                <title>UN Furniture |  404 </title>
             </Helmet>
 
             <div className="flex justify-center">

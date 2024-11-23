@@ -98,7 +98,7 @@ const AddReview = () => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  Add Review</title>
+                <title>UN Restaurant  |  Add Review</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "Sharing is Caring!!!", title: "Give a review..." }}></Title>

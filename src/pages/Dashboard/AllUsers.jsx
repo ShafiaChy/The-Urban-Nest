@@ -56,7 +56,7 @@ const AllUsers = () => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  All Users</title>
+                <title>UN Restaurant |  All Users</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "How many??", title: "Manage all users" }}></Title>

@@ -123,7 +123,7 @@ const CheckoutForm = ({ order }) => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  Checkout</title>
+                <title>UN Restaurant  |  Checkout</title>
             </Helmet>
             <form onSubmit={handleSubmit}>
                 <CardElement

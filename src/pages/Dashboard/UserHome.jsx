@@ -21,7 +21,7 @@ import useReviews from '../../Hooks/useReviews';
 
     <div className='h-screen  pt-10 w-full'>
       <Helmet>
-        <title>BB Restaurant |  User Home</title>
+        <title>UN Restaurant  |  User Home</title>
       </Helmet>
       <h2 className="text-center text text-animation p-4 text-3xl normal-case">Hi, Welcome Back!</h2>
       <div class="flex flex-wrap justify-center">

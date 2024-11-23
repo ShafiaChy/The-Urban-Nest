@@ -38,7 +38,7 @@ const ManageItems = () => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  Manage Items</title>
+                <title>UN Restaurant  |  Manage Items</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "Hurry Up!", title: "Manage all Items" }}></Title>

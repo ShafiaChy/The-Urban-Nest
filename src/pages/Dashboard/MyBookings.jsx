@@ -51,7 +51,7 @@ const MyBookings = () => {
 
         <>
             <Helmet>
-                <title>BB Restaurant |  My Bookings</title>
+                <title>UN Restaurant  |  My Bookings</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "Excellent Ambience", title: "My Bookings" }}></Title>

@@ -50,7 +50,7 @@ const ManageBookings = () => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  Manage Bookings</title>
+                <title>UN Restaurant  |  Manage Bookings</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "At a Glance!", title: "Manage all bookings" }}></Title>

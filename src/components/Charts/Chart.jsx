@@ -7,23 +7,29 @@ const colors = scaleOrdinal(schemeCategory10).range();
 
 const data = [
     {
-        name: "Dessert",
+        name: "Bed Room",
         sold: 30,
        
     },
     {
-        name: "Pizza",
+        name: "Dining Room",
         sold: 35,
        
     },
     {
-        name: "Salad",
+        name: "Office",
         sold: 20,
        
     },
     {
-        name: "Soup",
+        name: "Living Room",
         sold: 25,
+     
+    },
+    
+    {
+        name: "Outdoor",
+        sold: 45,
      
     }
 ];

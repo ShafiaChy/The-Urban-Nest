@@ -90,7 +90,7 @@ const UpdateItem = () => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  Update Item</title>
+                <title>UN Restaurant  |  Update Item</title>
             </Helmet>
             <h1 className='my-14 text-center text-5xl text-animation text font-extrabold '>Update Item</h1>
             <div className="bg-[#eceae380] mx-20 p-6">

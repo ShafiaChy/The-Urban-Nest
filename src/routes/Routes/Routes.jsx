@@ -86,10 +86,7 @@ const routes = createBrowserRouter([
         path: "/dashboard/updateItem/:id",
         element: <UpdateItem />,
       },
-      {
-        path: "/dashboard/manageBookings",
-        element: <ManageBookings />,
-      },
+    
       {
         path: "/dashboard/paymentHistory",
         element: <PaymentHistory />,
@@ -102,10 +99,7 @@ const routes = createBrowserRouter([
         path: "/dashboard/allUsers",
         element: <AllUsers />,
       },
-      {
-        path: "/dashboard/reservation",
-        element: <Reservation />,
-      },
+  
       {
         path: "/dashboard/manageItems",
         element: <ManageItems />,
@@ -114,10 +108,7 @@ const routes = createBrowserRouter([
         path: "/dashboard/mycart",
         element: <MyCart />,
       },
-      {
-        path: "/dashboard/mybookings",
-        element: <MyBookings />,
-      },
+    
       {
         path: "/dashboard/payment",
         element: <Payment />,

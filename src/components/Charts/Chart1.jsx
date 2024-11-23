@@ -58,40 +58,46 @@ const Chart1 = () => {
     if(loading){
       return <Spinner2></Spinner2>
     }
-   const dessert = items?.filter(item => item.category==='dessert') || '';
-   const salad = items?.filter(item => item.category==='salad') || '';
-   const pizza = items?.filter(item => item.category==='pizza') || '';
-   const soup = items?.filter(item => item.category==='soup') || '';
-  
+   const bedroom = items?.filter(item => item.category==='Bed Room') || '';
+   const livingroom = items?.filter(item => item.category==='Living Room') || '';
+   const dining = items?.filter(item => item.category==='Dining Room') || '';
+   const office = items?.filter(item => item.category==='Office') || '';
+   const outdoor = items?.filter(item => item.category==='Outdoor') || '';
+  console.log(bedroom)
    
     const data = [
     
         {
-            name: "Dessert",
+            name: "Dining Room",
            
-            items: dessert.length
+            items: dining.length
         },
         {
-            name: "Pizza",
+            name: "Living Room",
             
-            items: pizza.length
+            items: livingroom.length
         },
         {
-            name: "Salad",
+            name: "Bed Room",
             
-            items: salad.length
+            items: bedroom.length
         },
         {
-            name: "Soup",
+            name: "Office",
             
-            items: soup.length
+            items: office.length
+        },
+        {
+            name: "Outdoor",
+            
+            items: outdoor.length
         }
     ];
     return (
         <div style={{ display: "flex", justifyContent: "center" }}>
             <PieChart width={400} height={380}>
                 <Legend align="center"
-                    wrapperStyle={{ paddingTop: "4px", marginTop: "4px" }}
+                    wrapperStyle={{ paddingTop: "4px", marginTop: "2px" }}
                     layout="horizontal"
                     verticalAlign="top"
                     iconSize={30}

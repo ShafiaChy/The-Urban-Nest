@@ -107,7 +107,7 @@ const AddItem = () => {
     return (
         <>
             <Helmet>
-                <title>BB Restaurant |  Add Item</title>
+                <title>UN  Furniture |  Add Item</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "What's new?", title: "Add an item" }}></Title>

@@ -16,7 +16,7 @@ const MyCart = () => {
     const [couponPrice, setCouponPrice] = useState(0);
     const [couponPercent, setCouponPercent] = useState(0);
   
-    console.log(couponCode)
+    console.log(carts, couponCode)
     let total = carts ? carts?.reduce((acc, order) => acc + Number(order.price), 0) : 0;
     console.log(total, carts)
 
@@ -56,7 +56,7 @@ const MyCart = () => {
 
     const handlePayment = () => {
      
-        navigate('/dashboard/payment', { state: { couponPrice: couponPrice ? couponPrice : total, category: 'Food Order', coupon: couponPercent,amount:total  } })
+        navigate('/dashboard/payment', { state: { couponPrice: couponPrice ? couponPrice : total, category: 'Furniture Order', coupon: couponPercent,amount:total  } })
         // handleDeleteItem(true)
     }
 
@@ -110,7 +110,7 @@ const MyCart = () => {
 
         <>
             <Helmet>
-                <title>BB Restaurant |  My Cart</title>
+                <title>UN Restuarant |  My Cart</title>
             </Helmet>
             <div className="w-full">
                 <Title type={{ smallHeading: "My Cart", title: "Wanna add more?" }}></Title>
