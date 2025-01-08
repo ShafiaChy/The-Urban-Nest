@@ -8,7 +8,7 @@
   <h2 align="center">The UrbanNest</h2>
 
   <p align="center">
-    A culinary experience fit for a boss!
+    Discover the art of modern living!
     <br />
     <a></a>
     <a href="https://urbannest-furniture.vercel.app/">View Demo</a>
@@ -20,17 +20,17 @@
 <!-- ABOUT THE PROJECT -->
 <h1></h1>
 
-## :stew: About The Project
+## 🛋️: About The Project
 
 <br/>
  <a align='center' href="https://urbannest-furniture.vercel.app/">
-    <img align='center' src="https://i.ibb.co.com/BrRb6cz/Capture423.png" alt="Logo" width="1200px" height="700">
+    <img align='center' src="https://i.ibb.co.com/Qv91d24/Capture423.png" alt="Logo" width="1200px" height="700">
   </a>
 
 <br/>
 <br/>
 
-<b>Bistro Boss</b> is an online delivery system for the food-lovers that allows customers to place orders for food items and have them delivered to their doorstep. The system is designed to be easy to use and you can also book a table from our website!:grinning:
+<b>The UrbanNest</b> is an online delivery system for the food-lovers that allows customers to place orders for food items and have them delivered to their doorstep. The system is designed to be easy to use and you can also book a table from our website!:grinning:
 
 :white_check_mark: Our Features:
 
